@@ -1,16 +1,11 @@
-build:
-	latexmk -pdf -output-directory=_build 5_курсовая_ПО-4_Галанин_ПЗ.tex
-	latexmk -pdf -output-directory=_build 5_курсовая_ПО-4_Галанин_ПрилА.tex
-	latexmk -pdf -output-directory=_build 5_курсовая_ПО-4_Галанин_ПрилА3.tex
-	latexmk -pdf -output-directory=_build 5_курсовая_ПО-4_Галанин_ПрилБ.tex
-	# latexmk -pdf -output-directory=_build gpi_disciplineK_rep_labN.tex
+docker-compose-script:
+	cd /app/report
 
-clean:
-	rm -rfv ./*/*.aux
-	rm -rfv ./*/*.fdb_latexmk
-	rm -rfv ./*/*.fls
-	rm -rfv ./*/*.log
-	rm -rfv ./*/*.out
-	rm -rfv ./*/*.pdf
-	rm -rfv ./*/*.synctex.gz
-	rm -rfv ./*/*.toc
+	latexmk -pdf -output-directory=/temp/ -jobname=KP.PO4.190333-05_81_00 main_coursework_1_pz.tex
+	latexmk -pdf -output-directory=/temp/ -jobname=KP.PO4.190333-05_90_00__part1 main_coursework_3_0_a.tex
+	latexmk -pdf -output-directory=/temp/ -jobname=KP.PO4.190333-05_90_00__part2 main_coursework_3_1_a.tex
+	latexmk -pdf -output-directory=/temp/ -jobname=KP.PO4.190333-05_12_00 main_coursework_4_b.tex
+
+	latexmk -pdf -output-directory=/temp/ -jobname=KP.PO4.190333-05_81_00.bundle main.tex
+
+	cp /temp/*.pdf /build/

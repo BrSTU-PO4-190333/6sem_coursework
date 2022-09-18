@@ -46,8 +46,9 @@
 
     %
     \newpage
-    \addcontentsline{toc}{section}{ВВЕДЕНИЕ}
     \section*{ВВЕДЕНИЕ}
+    \phantomsection
+    \addcontentsline{toc}{section}{ВВЕДЕНИЕ}
 
     Цель курсовой работы по дисциплине <<Совремменные платформы программирования>> - детальное проектирование и программная реализация сетевой игры.
 
@@ -568,52 +569,67 @@
 
     %
     \newpage
-    \addcontentsline{toc}{section}{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}
-    \section*{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}
-    \begin{enumerate}
-        \item[1.] Получение GET и POST запросов на Node.js - YouTube
-        - [Электронный ресурс]
+    \begingroup
+      \section*{Список использованных источников}
+      \phantomsection
+      \addcontentsline{toc}{section}{Список использованных источников}
+    
+      \renewcommand{\addcontentsline}[3]{}% Remove functionality of \addcontentsline
+      \renewcommand{\section}[2]{}% Remove functionality of \section
+    
+      \begin{thebibliography}{}
+        \bibitem{youtube_node_get}
+        Получение GET и POST запросов на Node.js - YouTube
+        - [Электронный ресурс].
         Режим доступа: \url{https://www.youtube.com/watch?v=YMJDUHUccvA}
         Дата~доступа:~19.11.2021.
 
-        \item[2.] Подключение к базе данных MySQL в Node.js - YouTube
+        \bibitem{youtube_node_mysql}
+        Подключение к базе данных MySQL в Node.js - YouTube
         - [Электронный ресурс]
         Режим доступа: \url{https://www.youtube.com/watch?v=YhuozY-qplI}
         Дата~доступа:~19.11.2021.
 
-        \item[3.] Модули Node.js, require - YouTube
-        - [Электронный ресурс]
+        \bibitem{youtube_node_require}
+        Модули Node.js, require - YouTube
+        - [Электронный ресурс].
         Режим доступа: \url{https://www.youtube.com/watch?v=1PkarXC-9TQ}
         Дата~доступа:~19.11.2021.
 
-        \item[4.] Manual installation steps for older versions of WSL | Microsoft Docs
-        - [Электронный ресурс]
+        \bibitem{windows10_wsl}
+        Manual installation steps for older versions of WSL | Microsoft Docs
+        - [Электронный ресурс].
         Режим доступа: \url{https://aka.ms/wsl2kernel}
         Дата~доступа:~19.11.2021.
 
-        \item[5.] Леоненков А. В.
+        \bibitem{uml_leonenkov}
+        Леоненков А. В.
         Самоучитель UML 2. -- СПб.: БХВ-Петерберг, 2007. -- 576с.
 
-        \item[6.] Почему в папке 'React-router-dom' нет экспорта Switch? — Хабр Q\&A
-        - [Электронный ресурс]
+        \bibitem{habr_react_router_dom_switch}
+        Почему в папке 'React-router-dom' нет экспорта Switch? — Хабр Q\&A
+        - [Электронный ресурс].
         Режим доступа: \url{https://qna.habr.com/q/1103400}
         Дата~доступа:~15.05.2022.
 
-        \item[7.] React Router | Upgrading from v5
-        - [Электронный ресурс]
-        Режим доступа: \url{https://reactrouter.com/docs/en/v6/upgrading/v5}
-        Дата~доступа:~15.05.2022.
+        \bibitem{react_router_upgrading_v5}
+        React Router | Upgrading from v5
+        [Electronic resource].
+        Mode of access: \url{https://reactrouter.com/docs/en/v6/upgrading/v5}
+        Date~of~access:~15.05.2022.
 
-        \item[8.] reactjs - How to build a 404 page with react-router-dom v6 - Stack Overflow
-        - [Электронный ресурс]
-        Режим доступа: \url{https://stackoverflow.com/questions/67050966/how-to-build-a-404-page-with-react-router-dom-v6}
-        Дата~доступа:~15.05.2022.
+        \bibitem{stack_owerflow_404_react_router_dom_v6}
+        reactjs - How to build a 404 page with react-router-dom v6 - Stack Overflow
+        [Electronic resource].
+        Mode of access: \url{https://stackoverflow.com/questions/67050966/how-to-build-a-404-page-with-react-router-dom-v6}
+        Date~of~access:~15.05.2022.
 
-        \item[9.] AugustinSorel/multiplayerTicTacToe: simple multiplayer made with react and socket io
-        - [Электронный ресурс]
-        Режим доступа: \url{https://github.com/AugustinSorel/multiplayerTicTacToe}
-        Дата~доступа:~16.05.2022.
-
-    \end{enumerate}
+        \bibitem{github_AugustinSorel_multiplayerTicTacToe}
+        AugustinSorel/multiplayerTicTacToe: simple multiplayer made with react and socket io
+        [Electronic resource].
+        Mode of access: \url{https://github.com/AugustinSorel/multiplayerTicTacToe}
+        Date~of~access:~16.05.2022.
+      \end{thebibliography}
+    \endgroup
     \newpage
 \end{document}
